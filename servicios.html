@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Seleccion de Servicio</title> 
+<script type="text/javascript">
+function escribe() {
+
+         lista = document.elige.grupos
+         opciones = lista.options
+         escribir = document.getElementById("respuesta")
+         escribir.innerHTML = ""
+         for (i=0;i<opciones.length;i++) {
+              if (opciones[i].selected == true ) {
+                 grupos = opciones[i].text
+                 escribir.innerHTML += grupos + "<br/>"
+                 }
+              }
+         
+              
+              
+                
+            }
+
+</script>
+</head>
+<link rel="stylesheet" href="assets/css/master.css">
+<body>
+<form name="elige" action="#" >
+<h2>Elige tu servicio de la lista:</h2>
+<select name="grupos" multiple="multiple" >
+   <option value="Recoleccion De Basura">Recoleccion De Basura</option>
+   <option value=">Limpieza Y Desinfeccion De Calle">Limpieza Y Desinfeccion De Calle</option>
+   </select><br/><br/>
+<input type="button" name="pulsar" onclick="escribe()" 
+    value="Elegir" />
+   
+    
+</form>
+
+<div>
+    <p >Has elegido el servicio de: </p>
+    <h4 id="respuesta">  <h4>
+    
+</div>
+<input type="button" name="pulsar" onclick="alert('Se le ha asignado al Conductor: Juan Perez Carro: TBZ-1234')" 
+    value="Finalizar" />
+
+    
+
+</body>
+
+</html>
