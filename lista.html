@@ -3,6 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Apliacion | WEB</title>
+    <SCRIPT languaje="JavaScript">
+      function pulsar() {
+        var rand_NumeroAleatorio = Math.round(Math.random()*3);
+        if (rand_NumeroAleatorio==1){
+          alert("Su conductor asignado: Juan Perez en el vehículo de placa: TAB-1235");
+        } 
+        if (rand_NumeroAleatorio==2){
+          alert("Su conductor asignado: Daniel Konner en el vehículo de placa: PXB-9965");
+        }
+        if (rand_NumeroAleatorio==3){
+          alert("Su conductor asignado: Fernando Parreño  en el vehículo de placa: GAO-3654");
+        }
+      }
+      </SCRIPT>
     <link rel="stylesheet" href="assets/css/registro.css">
   </head>
   <body>
@@ -18,8 +32,10 @@
         <label for="direccion">Direccion/Ubicacion</label>
         <input type="direccion" placeholder="Calle principal y secundaria">
         
-        <input type="submit" value="Confirmar">
+        <input type="submit" value="Confirmar" onclick="pulsar()"> 
+        
         <input type="submit" value="Finalizar" formaction="index.html">
+
       </form>
     </div>
   </body>
